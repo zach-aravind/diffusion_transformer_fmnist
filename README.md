@@ -2,6 +2,12 @@
 
 A conditional diffusion model based on the Diffusion Transformer (DiT) architecture for generating Fashion MNIST images with classifier-free guidance.
 
+## Model Design
+
+![Diffusion Transformer Architecture](Design.png)
+
+The diagram above shows the architecture of the conditional Diffusion Transformer model. It combines image patches, timestep information, and class labels to generate or denoise images.
+
 ## Project Structure
 
 ```
