@@ -6,7 +6,17 @@ A conditional diffusion model based on the Diffusion Transformer (DiT) architect
 
 ![Diffusion Transformer Architecture](Design.png)
 
-The diagram above shows the architecture of the conditional Diffusion Transformer model. It combines image patches, timestep information, and class labels to generate or denoise images.
+The diagram above shows the architecture of the conditional Diffusion Transformer model. Key components include:
+
+1. **Patch Embedding**: Transforms the input image into a sequence of patch embeddings.
+2. **Positional Embedding**: Adds position information to the patch sequence.
+3. **Timestep Embedding**: Encodes diffusion timestep information via sinusoidal embeddings and an MLP.
+4. **Label Embedding**: Embeds class labels to condition the generation process.
+5. **DiT Blocks**: Transformer blocks with AdaLN-Zero conditioning, using the combined timestep and label embeddings.
+6. **Final Layer**: Processes the transformer output with adaptive layer normalization.
+7. **Unpatchify**: Reconstructs the image from patch embeddings.
+
+This architecture supports classifier-free guidance (CFG) during both training and sampling for improved generation quality and class conditioning.
 
 ## Project Structure
 
