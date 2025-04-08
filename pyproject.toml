@@ -1,0 +1,25 @@
+[project]
+name = "Diffusin_Transformer_Fmnist"
+version = "0.1.0"
+description = "Diffsuin Transformer on Fashion Mnist Data"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "einops>=0.8.1",
+    "matplotlib>=3.10.1",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "tqdm>=4.67.1",
+]
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu" },
+]
+torchvision = [
+    { index = "pytorch-cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
