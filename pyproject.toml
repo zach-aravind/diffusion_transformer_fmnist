@@ -1,7 +1,7 @@
 [project]
-name = "Diffusin_Transformer_Fmnist"
+name = "diffusion_transformer_fmnist"
 version = "0.1.0"
-description = "Diffsuin Transformer on Fashion Mnist Data"
+description = "Diffusion Transformer for conditional image generation on Fashion MNIST"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -11,6 +11,10 @@ dependencies = [
     "torchvision>=0.21.0",
     "tqdm>=4.67.1",
 ]
+
+[project.scripts]
+train = "diffusion_transformer_fmnist.train:main"
+generate = "diffusion_transformer_fmnist.generate:main"
 [tool.uv.sources]
 torch = [
     { index = "pytorch-cpu" },
