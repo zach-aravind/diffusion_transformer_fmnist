@@ -1,7 +1,7 @@
 import torch
 import torch.nn.functional as F
 from tqdm.auto import tqdm
-from .scheduler import extract
+from diffusion.scheduler import extract
 
 # Forward Process (Adding Noise)
 def q_sample(x_start, t, sqrt_alphas_cumprod_dev, sqrt_one_minus_alphas_cumprod_dev, noise=None):

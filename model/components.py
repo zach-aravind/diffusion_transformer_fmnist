@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from diffusion_transformer_fmnist.utils.helpers import pair, modulate
+from utils.helpers import pair, modulate
 
 # Patch Embedding
 class PatchEmbed(nn.Module):
