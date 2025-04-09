@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from .components import PatchEmbed, DiTBlock, FinalLayer
-from ..utils.helpers import SinusoidalPosEmb
+from diffusion_transformer_fmnist.utils.helpers import SinusoidalPosEmb
 
 class DiffusionTransformer(nn.Module):
     def __init__(

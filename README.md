@@ -54,16 +54,42 @@ diffusion_transformer_fmnist/
 
 ## Usage
 
-### Training
+You have three options to run this code:
+
+### Option 1: Using the provided runner scripts (recommended)
+
+These scripts handle the import paths for you:
 
 ```bash
-python train.py
+# Training
+./run_train.py
+
+# Generation
+./run_generate.py --guidance_scale 5.0 --samples_per_class 8
 ```
 
-### Generation
+### Option 2: Fix imports for direct usage
+
+If you want to run the scripts directly:
 
 ```bash
+# First fix the imports
+python fix_imports.py
+
+# Then you can run the scripts directly
+python train.py
 python generate.py --guidance_scale 5.0 --samples_per_class 8
+```
+
+### Option 3: Install as a package
+
+```bash
+# Install the package in development mode
+pip install -e .
+
+# Then run the modules
+python -m diffusion_transformer_fmnist.train
+python -m diffusion_transformer_fmnist.generate --guidance_scale 5.0 --samples_per_class 8
 ```
 
 Additional generation options:
